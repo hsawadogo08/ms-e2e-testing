@@ -13,8 +13,9 @@ public class TestCustomerServiceApplication {
     @Bean
     @ServiceConnection
     PostgreSQLContainer<?> postgresContainer() {
-        return new PostgreSQLContainer<>(DockerImageName.parse("postgres:latest"));
+        return new PostgreSQLContainer<>(DockerImageName.parse("postgres:16"));
     }
+
 
     public static void main(String[] args) {
         SpringApplication.from(CustomerServiceApplication::main).with(TestCustomerServiceApplication.class).run(args);

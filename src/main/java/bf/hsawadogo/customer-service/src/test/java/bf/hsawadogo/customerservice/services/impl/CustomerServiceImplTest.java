@@ -11,12 +11,14 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.test.context.ActiveProfiles;
 
 import java.util.Optional;
 
 import static org.assertj.core.api.AssertionsForClassTypes.*;
 import static org.junit.jupiter.api.Assertions.*;
 
+@ActiveProfiles("test")
 @ExtendWith(MockitoExtension.class) // Mockito va nous permettre de générer des mocks
 class CustomerServiceImplTest {
     @Mock
